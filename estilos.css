@@ -1,0 +1,180 @@
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://fondosmil.com/fondo/27549.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poltawski Nowy', serif;
+    box-sizing: border-box;
+}
+
+
+.calculadora-container {
+    width: 400px;
+    height: auto;
+    border: #f0ecec 2px solid;
+    background: rgba(139, 50, 50, 0.1); /* Color blanco con 10% de opacidad */
+    backdrop-filter: blur(5px);
+    
+    border-radius: 60px 60px / 20px 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgb(255, 253, 253);
+
+}
+#marca {
+    color: #a3a6a7;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#span-marca {
+    color: rgb(1, 4, 26);
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-shadow: 
+        0.5px 0 rgb(255, 253, 253), 
+        -1px 0 rgb(255, 253, 253), 
+        0 1px rgb(255, 253, 253), 
+        0 -1px rgb(255, 253, 253);
+}
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logo{
+    background:#dde9e1;
+    padding: 4px;
+    border-radius: 10px;
+}
+.logo img{
+    width: 10px;
+    
+}
+#pro {
+    border-radius: 15px;
+    cursor: pointer;
+    
+}
+
+
+.pantalla {
+    display: flex;
+    flex-direction: column;
+    border: 8px solid #0000008a;
+    border-radius: 5px;
+    overflow: hidden;
+    border-radius: 60px 60px / 20px 20px;
+
+
+    margin: 25px;
+}
+
+
+.calculo,
+.resultado {
+    border: none;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+.calculo {
+
+    resize: none;
+    outline: none;
+    background-color: #2227247a;
+    font-size: 20px;
+    overflow: auto;
+    overflow: hidden;
+}
+
+.resultado {
+    background-color: #2227247a;
+    font-size: 1.8em;
+    height: 80px;
+    text-align: right;
+    padding: 5px;
+    
+
+    
+
+}
+
+
+
+.funciones,
+.numeros, .cientifico {
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.funciones {
+    grid-template-columns: repeat(3, 2fr);
+    margin-bottom: 10px;
+    
+    display: none;
+    
+
+}
+
+
+
+.numeros {
+    grid-template-columns: repeat(4, 1fr);
+    display: none;
+}
+.cientifico {
+    grid-template-columns: repeat(7, 1fr);
+    
+    display: none;
+    margin-bottom: 10px;
+
+    
+}
+
+
+
+
+
+
+.funciones>div,
+.numeros>div, .cientifico>div {
+    height: 20px;
+    background: rgb(79,162,135);
+    background: rgb(174,171,226);
+    background: linear-gradient(120deg, rgb(192, 188, 248) 10%, rgb(187, 194, 240) 19%, rgb(108, 142, 235) 35%, rgb(93, 135, 248) 70%, rgb(17, 96, 241));
+    border: #fcfcff 2px solid;
+    color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+}
+.cientifico>div {
+    background-color: #898f8b;
+    color: #000;
+}
+
+.numeros>div:hover,
+.funciones>div:hover,
+.cientifico>div:hover {
+    background-color: #01162c;
+    
+}
