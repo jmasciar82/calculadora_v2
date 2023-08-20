@@ -11,21 +11,23 @@ function start() {
     const botonMarca = document.getElementById('marca');
     const botonPro = document.getElementById('pro');
     const botonOffOn = document.getElementById('off-on');
-    
+
 
     const botonMC = document.getElementById('mc');
     const botonPoner = document.getElementById('poner');
     const botonBorraMemoria = document.getElementById('borrar');
-    
+
     const botonPorcentaje = document.getElementById('porcentaje');
     const botonPi = document.getElementById('pi');
     const botonAbre = document.getElementById('abre-paren');
     const botonCierra = document.getElementById('cierra-paren');
-    
-    
+
+
+
+
 
     let datoGuardado
-    
+
 
 
 
@@ -81,12 +83,12 @@ function start() {
             botonMarca.style.backgroundColor = "#06aa37";
 
 
-            for(boton of botonesFuncion ){
+            for (boton of botonesFuncion) {
                 boton.style.borderColor = "#ffff";
             }
-            
-            
-            
+
+
+
 
 
 
@@ -97,9 +99,9 @@ function start() {
             botonOffOn.innerHTML = "ON"
             botonPro.style.backgroundColor = 'rgba(24,222,24,1)'
             botonPro.style.color = 'white'
-            botonPro.style.borderColor= 'white'
+            botonPro.style.borderColor = 'white'
             botonPro.style.boxShadow = `0.5px 1.5px 3.5px 7px rgba(255,255,255,255)`;
-            
+
             //modo off
         } else {
             modo.style.display = "none";
@@ -140,7 +142,7 @@ function start() {
 
         let valor = calculo.innerHTML;
 
-        if(!valor){
+        if (!valor) {
             return
         }
 
@@ -153,12 +155,12 @@ function start() {
                 let resultadoPorcentaje = (porciento / 100) * numero;
                 // el resultado lo paso con formato de a miles y lo muestro en la pantalla resultado
                 resultado.innerHTML = resultadoPorcentaje.toLocaleString('es-ES');
-                return;  
+                return;
             }
         }
 
 
-        
+
         let obtengoResultado = eval(calculo.innerHTML.replace(/pi/g, "Math.PI").replace(/\^/g, '**'));
         let stringValor = obtengoResultado.toLocaleString('es-ES');
         if (stringValor.length > 13) {
